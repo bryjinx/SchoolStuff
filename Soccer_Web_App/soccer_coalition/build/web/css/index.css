@@ -1,0 +1,36 @@
+@media screen and (min-width: 768px) {
+	#page-content {
+		margin-top:80px;
+		margin-bottom:75px;
+	}
+	#navbar-main {
+		position: fixed;
+		z-index: 5;
+		left:0;
+		right:0;
+		top: 0;
+		width:100%;
+	}
+	#footer-main {
+		position: fixed;
+		z-index: 5;
+		left:0;
+		right:0;
+		bottom:0;
+		width:100%;
+	}
+	#side-nav {
+		position: fixed;
+		z-index: 5;
+		left:0;
+		height: 100%;
+		display: flex;
+		align-items: baseline;
+	}
+}
+@media screen and (max-width: 847px) and (min-width: 768px) {
+	#page-content {
+		margin-top: 95px;
+	}
+}
+

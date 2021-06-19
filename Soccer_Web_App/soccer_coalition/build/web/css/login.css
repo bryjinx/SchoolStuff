@@ -1,0 +1,17 @@
+@media screen and (min-width: 768px) {
+    .centered-area {
+        position:absolute;
+        top:50%;
+        left:50%;
+        margin: -150px 0 0 -150px;
+        width: 300px;
+        height: 200px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .centered-area {
+        width: 300px;
+        height: 200px;
+        margin-bottom: 80px;
+    }
+}

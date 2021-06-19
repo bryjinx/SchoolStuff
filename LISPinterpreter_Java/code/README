@@ -1,0 +1,60 @@
+______________________________________________________________________________________________
+______________________________________________________________________________________________
+                    Welcome to the README for Bry's Fancy Lisp Interpreter!
+______________________________________________________________________________________________
+______________________________________________________________________________________________
+
+To run the program simply type "make run"
+
+The program will ask you if you want to use File Mode of Command Line Mode. Modes cannot be
+changed after they are chosen. 
+
+[File Mode]: Enter '(y)' to use File Mode at first prompt.
+             - Then either enter a file to read or simply type '(default)' to use the included
+             - testcases.txt file.
+             - output.txt will be written/overwritten with the outputs of the commands.
+             - Defining commands like 'set!', 'define', and 'lambda' don't produce output.
+
+[Command Line Mode]: Enter anything other than '(y)' to use Command Line Mode at first prompt.
+             - Command-Line-Mode is a read-eval-loop
+             - Just enter LISP commands, the output will be printed to the screen.
+______________________________________________________________________________________________            
+                                    .txt Files
+______________________________________________________________________________________________            
+testcases.txt         - Contains the test cases for the default file to be fed to the LISP 
+                        Interpreter
+                        
+output.txt            - File to for outputs from File Mode to be written to. Will be 
+                        overwritten with each use of File Mode.
+                        
+testcases_answers.txt - For Humans only file showing what each input in the testcases.txt 
+                        should produce into the output.txt file.
+                        
+______________________________________________________________________________________________            
+                        Commands and How to Use Them
+______________________________________________________________________________________________
+
+   DEFINE a variable: '(define <var> <number>)'
+
+   VAR REFERENCE for any defined variable x: 
+      (x) will return the value
+
+   SET!: '(set! <var> <exp>)'
+      Evaluates the expression and sets <var> to the answer
+
+   COND: '(if (<cond>) (<Exp1>) (<Exp1>))'
+      returns Exp1 if <cond> is True and Exp2 if <cond> is False
+
+   QUOTE: '(quote <string>)'    like Linux's echo, just returns <string>
+
+   BUILT-IN FUNCTIONS: sin, cos, tan, sqrt
+
+   DEFINE functions: '(lambda <name> (<parameters>) (<expression>))'
+
+   POLISH NOTATION MATH:
+	NOTE: Nested math expressions should NEVER HAVE a non-nested expression
+       AFTER the nested expression for it to be evaluated correctly
+   GOOD: (+ + 6 (+ 2 2) (+ 2 3))
+   GOOD: (+ + 4 6 (+ 2 3))
+   GOOD: (+ (+ 2 2) 4 (+ 2 2))
+   BAD:  (+ + (+ 2 2) (+ 2 3) 6)
